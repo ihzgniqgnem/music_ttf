@@ -22,7 +22,7 @@ RATE=0
 CHANNELS=1
 pa=pyaudio.PyAudio()
 if FROM_FILE:
-    file = pydub.AudioSegment.from_mp3(FROM_FILE)
+    file = pydub.AudioSegment.from_file(FROM_FILE)
     if not RATE:RATE = file.frame_rate
     CHANNELS = file.channels
     stream = stream_(file.raw_data)
